@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.2">
+    <persistence-unit name="bd_laboratorio_orm" transaction-type="RESOURCE_LOCAL">
+        <provider>
+            org.hibernate.jpa.HibernatePersistenceProvider
+        </provider>
+        <class>com.laboratorio.bd_laboratorio_orm.model.Equipo</class>
+        <class>com.laboratorio.bd_laboratorio_orm.model.TipoEquipo</class>
+
+        <properties>
+            <!-- PostgreSQL connection using environment variables -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="${DB_URL}"/>
+            <property name="jakarta.persistence.jdbc.user" value="${DB_USER}"/>
+            <property name="jakarta.persistence.jdbc.password" value="${DB_PASSWORD}"/>
+
+            <!-- Hibernate properties -->
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.default_schema" value="laboratorio"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
