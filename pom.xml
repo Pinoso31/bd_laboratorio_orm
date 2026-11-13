@@ -86,7 +86,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.laboratorio.bd_laboratorio_orm/com.laboratorio.bd_laboratorio_orm.HelloApplication
+                                com.laboratorio.bd_laboratorio_orm/com.laboratorio.bd_laboratorio_orm.LaboratorioApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
